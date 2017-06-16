@@ -1,0 +1,70 @@
+<header>
+  <div id="loading" class="loader freeze">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</header>
+
+<style>
+  .loader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 40px;
+    height: 10px;
+    margin: 44px 0 14px;
+  }
+
+  .loader.freeze .dot {
+    -webkit-animation-name: none;
+  }
+
+  .loader.stop .dot {
+    -webkit-animation-iteration-count: 1;
+  }
+
+  .loader .dot {
+    position: absolute;
+    float: left;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #9b9b9b;
+    -webkit-animation-name: dotmove;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  .loader .dot:nth-of-type(2) {
+    -webkit-animation-delay: .4s;
+    left: 10px;
+  }
+
+  .loader .dot:nth-of-type(3) {
+    -webkit-animation-delay: .8s;
+    left: 20px;
+  }
+
+  @keyframes dotmove {
+    0% {
+      transform: translate(0, 0);
+    }
+    5% {
+      /*      background:yellow; */
+      transform: translate(0, 1vh)
+    }
+    20% {
+      height: 25px;
+    }
+    30% {
+      /*      background:orange; */
+      transform: translate(0, -4vh);
+      height: 2px;
+    }
+    45% {
+      transform: translate(0, 0);
+    }
+  }
+</style>

@@ -1,0 +1,40 @@
+
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               john mienna
+tagline:             '@jrmienna'
+url:                 http://jrmienna.github.io
+future:              true
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              J. R. Mienna
+  email:             john.mienna@gmail.com
+
+# Site
+version:             1.0.0
+github:
+  repo:              https://github.com/jrmienna/jrmienna.github.io
+google_analytics:    UA-84916843-1
+github:              jrmienna
+linkedin:            jrmienna
+youtube:             UCXjEMKB7djLU41ZKKv_NFsQ
+medium:              jrmienna
+strava:              17162664
+instagram:           jrmienna
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
