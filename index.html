@@ -12,12 +12,42 @@ title: Home
   <span><del>freelance</del> designer</span>
 </section> -->
 
+<style>
+  .post {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+  }
+  .post-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+</style>
+
 <section>
   {% for post in site.posts %}
     {% if post.link %}
-    <a class="external" href="{{ post.link }}" target="_blank">{{ post.title }}.</a>
+    <div>
+      <a class="external" href="{{ post.link }}" target="_blank">{{ post.title }}.</a>
+      <small>{{ post.subtitle }}</small>
+    </div>
     {% else %}
-    <a class="internal" href="{{ post.url }}">{{ post.title }}.</a>
+    <a href="{{ post.url }}" class="post" style="background-image: url({{ post.image }});">
+      <div class="post-content">
+        <strong>{{ post.title }}</strong><br />
+        <small>&nbsp;{{ post.subtitle }}</small>
+        <div>
+          {% for tag in post.tags %}
+          <span>#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </a>
     {% endif %}
   {% endfor %}
 </section>

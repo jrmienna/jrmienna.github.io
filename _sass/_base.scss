@@ -101,6 +101,10 @@ a {
 //     }
 // }
 
+small {
+  font-size: $font-size;
+  color: lighten($color-text, 30%);
+}
 
 blockquote {
   color: $color-accent;

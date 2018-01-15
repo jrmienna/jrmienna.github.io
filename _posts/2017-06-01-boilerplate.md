@@ -2,7 +2,7 @@
 layout: post
 title: The spectacle before us was indeed sublime
 subtitle: Boilerplate Post
-header: background.jpeg
+image: /public/background.jpeg
 season: Q4 2017
 published: false
 ---
@@ -62,6 +62,16 @@ consequat.
 <div class="youtube">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/rAG19b8MMGE" frameborder="0" allowfullscreen></iframe>
 </div>
+
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
