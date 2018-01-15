@@ -8,12 +8,13 @@ $font-size-xl: 1.6em;
 $line-height: 1.4;
 $font-family-head: "Lora", serif;
 $font-family-text: "Lato", sans-serif;
+$link-colors: red, orange, yellow, green, blue, purple;
+$link-colors-repeat: 20;
 
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
@@ -61,7 +62,6 @@ p, blockquote {
 }
 
 span {
-  display: block;
 }
 
 code {
@@ -85,7 +85,21 @@ section {
 
 a {
   color: $color-text;
+  text-decoration: none;
+  transition: background-color 0.3s cubic-bezier(.4, 0, .2, 1);
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
+
+// @for $i from 1 through $link-colors-repeat {
+//     a:nth-child(#{length($link-colors)}n+#{$i}):hover {
+//       background-color: lighten(nth($link-colors, random(length($link-colors))), 20%);
+//     }
+// }
 
 
 blockquote {
@@ -118,5 +132,43 @@ blockquote {
   	left: 0;
   	width: 100%;
   	height: 100%;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: red;
+  z-index: 999;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(.1, 0, .2, 4);
+  &.in {
+    animation-name: fadein;
+  }
+  &.out {
+    animation-name: fadeout;
   }
 }
