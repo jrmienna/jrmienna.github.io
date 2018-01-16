@@ -8,6 +8,28 @@ layout: default
 
 <h2>{{ page.subtitle }}</h2>
 
+{% assign project = site.data.projects[page.project] %}
+
+<aside>
+  <strong>Status:</strong>
+  <span>{{ project.status }}</span>
+</aside>
+
+<aside>
+  <strong>Visit:</strong>
+  {% for visit in project.visit %}
+    <a class="external" href="{{ visit.url }}" target="_blank">{{ visit.name }}.</a>
+  {% endfor %}
+</aside>
+
+<aside>
+  <strong>Follow:</strong>
+  {% for follow in project.follow %}
+    <a class="external" href="{{ follow.url }}" target="_blank">{{ follow.name }}.</a>
+  {% endfor %}
+</aside>
+
 <article>
+  <p>{{ page.excerpt }}</p>
   {{ content }}
 </article>
