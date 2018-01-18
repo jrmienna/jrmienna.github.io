@@ -1,7 +1,7 @@
 $background: white;
 $color-head: #2a2a2a;
 $color-text: #3a3a3a;
-$color-accent: #8f8f8f;
+$color-accent: #444;
 $font-size: 16px;
 $font-size-lg: 1.3em;
 $font-size-xl: 1.6em;
@@ -35,7 +35,6 @@ body {
 }
 
 main {
-  margin-bottom: 5em;
 }
 
 h1,
@@ -47,18 +46,17 @@ h3 {
 }
 
 h1 {
-  font-size: $font-size-xl;
+  font-size: $font-size;
 }
 
 h2 {
   color: $color-accent;
-  font-size: $font-size-lg;
+  font-size: $font-size;
   font-weight: 400;
 }
 
 p, blockquote {
   font-family: $font-family-text;
-  margin: 1em 0 2em;
 }
 
 span {
@@ -79,8 +77,11 @@ img {
   width: 100%;
 }
 
+header {
+}
+
 section {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 a {
@@ -102,14 +103,21 @@ a {
 // }
 
 small {
-  font-size: $font-size;
   color: lighten($color-text, 30%);
+}
+
+hr {
+  border: none;
+  background: #DDD;
+  height: 2px;
+  width: 25px;
+  margin: 3em auto;
 }
 
 blockquote {
   color: $color-accent;
   font-size: $font-size-lg;
-  padding: 1.5em;
+  padding: 2em;
   &:before {
     font-size: 3em;
     content: open-quote;
@@ -118,6 +126,8 @@ blockquote {
     margin-left: -0.5em;
   }
   p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
     margin: 0;
     padding: 0;
     color: inherit;

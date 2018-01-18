@@ -1,0 +1,36 @@
+---
+layout: default
+title: Projects
+---
+
+<section>
+  {% for post in site.posts %}
+    {% assign project = site.data.projects[post.project] %}
+    <div>
+      <a class="external" href="{{ post.url }}">
+        {{ post.title }}
+        {% if project %}
+          ({{ project.status}})
+        {% endif %}
+      </a>
+    </div>
+  {% endfor %}
+</section>
+
+<style>
+  .post {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+  }
+  .post-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+  }
+</style>
+

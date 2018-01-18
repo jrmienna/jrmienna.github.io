@@ -1,0 +1,33 @@
+<nav>
+  <a class="brand">mienna</a>
+  <div class="items">
+    <!-- <a href="/projects">projects.</a> -->
+    <!-- <a href="/about">about.</a> -->
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: relative;
+    padding: 4em 0;
+    /* font-family: 'Unica One', cursive; */
+  }
+  .brand, .items {
+    font-size: 1.6em;
+    /* text-transform: uppercase; */
+  }
+  .brand {
+    position: absolute;
+    display: block;
+    left: -6em;
+    font-weight: bold;
+  }
+  .items {
+    display: inline-block;
+  }
+  @media (max-width: 1000px) {
+    .brand {
+      position: unset;
+    }
+  }
+</style>

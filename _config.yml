@@ -34,9 +34,6 @@ medium:              jrmienna
 strava:              17162664
 instagram:           jrmienna
 
-collections:
-  - projects
-
 # Gems
 gems:
   - jekyll-paginate

@@ -2,9 +2,14 @@
 layout: post
 title: The spectacle before us was indeed sublime
 subtitle: Boilerplate Post
+excerpt: |
+  This post is about cats.
+  Something about this yes.
+  Lorem ipsum dolor amet.
 image: /public/background.jpeg
 season: Q4 2017
 published: false
+project: px
 ---
 
 ![image](/public/background.jpeg)

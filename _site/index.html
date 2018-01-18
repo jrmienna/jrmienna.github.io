@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,8 +18,8 @@
 
 
 
-
-  <script>
+  
+    <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
@@ -34,148 +34,47 @@
     ga('create', 'UA-84916843-1', 'auto');
     ga('send', 'pageview');
 </script>
-
-
-<body>
-
-  <main>
-    <header>
-  <a href="#evolution" onclick="showEvolution()"><strong>MIENNA</strong></a>
-  <!-- <a href="/design">design.</a> -->
-</header>
-
-<!-- <section>
-  <span><del>freelance</del> designer</span>
-</section> -->
-
-<style>
-  .post {
-    position: relative;
-    display: block;
-    width: 250px;
-    height: 250px;
-    background-position: center;
-    background-size: cover;
-    padding: 50px;
-  }
-  .post-content {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-  }
-</style>
-
-<section>
   
-</section>
 
-<script src="deps/sweetalert2.js"></script>
-<script src="deps/gifshot.js"></script>
+  <body>
+    <main>
+      
+    </main>
+
+    <nav>
+  <a class="brand">mienna</a>
+  <div class="items">
+    <!-- <a href="/projects">projects.</a> -->
+    <!-- <a href="/about">about.</a> -->
+  </div>
+</nav>
 
 <style>
-  @keyframes segment-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  nav {
+    position: relative;
+    padding: 4em 0;
+    /* font-family: 'Unica One', cursive; */
   }
-  #evolution {
-    width: 600px;
-    height: 340px;
+  .brand, .items {
+    font-size: 1.6em;
+    /* text-transform: uppercase; */
   }
-  #evolution.loading::before {
+  .brand {
     position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    background: rgba(255,255,255,.8);
-    width: 100%;
-    height: 100%;
-    border-radius: .28571429rem;
-    z-index: 100;
+    display: block;
+    left: -6em;
+    font-weight: bold;
   }
-  #evolution.loading::after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 50%;
-    margin: -1.5em 0 0 -1.5em;
-    width: 1.5em;
-    height: 1.5em;
-    -webkit-animation: segment-spin .6s linear;
-    animation: segment-spin .6s linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    border-radius: 500rem;
-    border-color: #767676 rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.1);
-    border-style: solid;
-    border-width: .15em;
-    box-shadow: 0 0 0 1px transparent;
-    visibility: visible;
-    z-index: 101;
+  .items {
+    display: inline-block;
+  }
+  @media (max-width: 1000px) {
+    .brand {
+      position: unset;
+    }
   }
 </style>
 
-<script>
-  function showEvolution() {
-    swal({
-      width: 600,
-      padding: 0,
-      showConfirmButton: false,
-      html: '<div id="evolution" class="loading" />',
-      onOpen: () => {
-        gifshot.createGIF({
-          // Desired height of the image
-          'gifHeight': 340,
-          // Desired width of the image
-          'gifWidth': 600,
-          // The amount of time (10 = 1s) to stay on each frame
-          'frameDuration': 3,
-          // The text that covers the animated GIF
-          // 'text': 'Evolution',
-          // The font weight of the text that covers the animated GIF
-          // 'fontWeight': 'normal',
-          // The font size of the text that covers the animated GIF
-          // 'fontSize': '16px',
-          // The minimum font size of the text that covers the animated GIF
-          // Note: This option is only applied if the text being applied is cut off
-          // 'minFontSize': '10px',
-          // Whether or not the animated GIF text will be resized to fit within the GIF container
-          // 'resizeFont': false,
-          // The font family of the text that covers the animated GIF
-          // 'fontFamily': 'sans-serif',
-          // The font color of the text that covers the animated GIF
-          // 'fontColor': 'red',
-          // The horizontal text alignment of the text that covers the animated GIF
-          // 'textAlign': 'center',
-          // The vertical text alignment of the text that covers the animated GIF
-          // 'textBaseline': 'center',
-          // The X (horizontal) Coordinate of the text that covers the animated GIF (only use this if the default textAlign and textBaseline options don't work for you)
-          // 'textXCoordinate': null,
-          // The Y (vertical) Coordinate of the text that covers the animated GIF (only use this if the default textAlign and textBaseline options don't work for you)
-          // 'textYCoordinate': null,
-          'images': [
-            '/public/evolution/i1.png',
-          ]
-        },function(obj) {
-          if(!obj.error) {
-            var image = obj.image,
-            animatedImage = document.createElement('img');
-            animatedImage.src = image;
-            const target = document.getElementById("evolution");
-            target.classList.remove("loading");
-            target.appendChild(animatedImage);
-          }
-        });
-      },
-    });
-  }
-</script>
-
-  </main>
-
-</body>
+  </body>
 
 </html>

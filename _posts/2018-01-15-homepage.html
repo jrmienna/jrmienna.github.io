@@ -1,0 +1,98 @@
+---
+layout: post-simple
+title: Personal Website
+subtitle: Creating this very site
+season: Q1 2018
+published: false
+category: projects
+tags: web design
+project: p0
+---
+
+<section style="position: relative;">
+  <div id="evolution" class="loading"></div>
+</section>
+
+<p>
+  What the motivation behind this page?
+  Lorem ipsum er opprinnelig et lettere redigert utdrag fra De finibus bonorum et malorum av Cicero. Opprinnelig begynte avsnittet: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Lorem ipsum brukes som fylltekst i grafisk design og sideombrekking for å demonstrere det grafiske utseende før den endelige teksten er klargjort.
+</p>
+
+<p>
+  Lorem ipsum er opprinnelig et lettere redigert utdrag fra De finibus bonorum et malorum av Cicero. Opprinnelig begynte avsnittet: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Lorem ipsum brukes som fylltekst i grafisk design og sideombrekking for å demonstrere det grafiske utseende før den endelige teksten er klargjort.
+</p>
+
+<script src="/deps/sweetalert2.js"></script>
+<script src="/deps/gifshot.js"></script>
+
+<script>
+  gifshot.createGIF({
+    'gifHeight': 340,
+    'gifWidth': 600,
+    'frameDuration': 3,
+    'images': [
+      '/public/evolution/i1.png',
+      '/public/evolution/i2.png',
+      '/public/evolution/i3.png',
+      '/public/evolution/i4.png',
+      '/public/evolution/i5.png',
+    ]
+  },function(obj) {
+    if(!obj.error) {
+      var image = obj.image,
+      animatedImage = document.createElement('img');
+      animatedImage.src = image;
+      const target = document.getElementById("evolution");
+      target.classList.remove("loading");
+      target.appendChild(animatedImage);
+    }
+  });
+</script>
+
+<style>
+  @keyframes segment-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #evolution {
+    width: 600px;
+    height: 340px;
+    border: 6px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,.5);
+  }
+  #evolution.loading::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.8);
+    width: 100%;
+    height: 100%;
+    border-radius: .28571429rem;
+    z-index: 100;
+  }
+  #evolution.loading::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin: -1.5em 0 0 -1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    -webkit-animation: segment-spin .6s linear;
+    animation: segment-spin .6s linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 500rem;
+    border-color: #767676 rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.1);
+    border-style: solid;
+    border-width: .15em;
+    box-shadow: 0 0 0 1px transparent;
+    visibility: visible;
+    z-index: 101;
+  }
+</style>
