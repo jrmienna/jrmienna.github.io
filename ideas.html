@@ -1,22 +1,26 @@
 ---
 layout: default
-title: Projects
+title: Ideas
 ---
 
 <p>
-  Ideas
 </p>
 
 <section>
+  {% if !site.posts %}
+  <p>Ideas</p>
+  {% endif %}
   {% for post in site.posts %}
     {% assign project = site.data.projects[post.project] %}
-    <div>
-      <a class="external" href="{{ post.url }}">
-        {{ post.title }}
-        {% if project %}
-          ({{ project.status}})
-        {% endif %}
-      </a>
-    </div>
+    <ul>
+      <li>
+        <a class="external" href="{{ post.url }}">
+          {{ post.title }}
+          {% if project %}
+            ({{ project.status}})
+          {% endif %}
+        </a>
+      </li>
+    </ul>
   {% endfor %}
 </section>

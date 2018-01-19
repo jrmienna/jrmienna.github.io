@@ -3,21 +3,20 @@ layout: default
 title: Projects
 ---
 
-<p>
-  Projects
-</p>
+<p></p>
 
 <section>
-  {% for post in site.posts %}
-    {% assign project = site.data.projects[post.project] %}
-    <div>
-      <a class="external" href="{{ post.url }}">
-        {{ post.title }}
-        {% if project %}
-          ({{ project.status}})
-        {% endif %}
-      </a>
-    </div>
+  {% for project in site.projects %}
+    <ul>
+      <li>
+        <a class="external" href="{{ project.url }}">
+          {{ project.title }}
+          {% if project %}
+            ({{ project.status}})
+          {% endif %}
+        </a>
+      </li>
+    </ul>
   {% endfor %}
 </section>
 

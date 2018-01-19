@@ -1,42 +1,78 @@
----
-layout: post-simple
-title: Personal Website
-subtitle: Creating this very site
-season: Q1 2018
-published: false
-category: projects
-tags: web design
-project: p0
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section style="position: relative;">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Personal Website | @jrmienna
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="shortcut icon" href="/public/favicon.jpg">
+  <link rel="alternate" type="application/atom+xml" title="@jrmienna" href="/atom.xml">
+</head>
+
+
+  
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-84916843-1', 'auto');
+    ga('send', 'pageview');
+</script>
+  
+
+  <body>
+    <main>
+      
+
+<article>
+  <section style="position: relative;">
   <div id="evolution" class="loading"></div>
 </section>
 
 <p>
-  What the motivation behind this page?
-  Lorem ipsum er opprinnelig et lettere redigert utdrag fra De finibus bonorum et malorum av Cicero. Opprinnelig begynte avsnittet: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Lorem ipsum brukes som fylltekst i grafisk design og sideombrekking for å demonstrere det grafiske utseende før den endelige teksten er klargjort.
+  Personal Website (in progress)
 </p>
 
 <p>
-  Lorem ipsum er opprinnelig et lettere redigert utdrag fra De finibus bonorum et malorum av Cicero. Opprinnelig begynte avsnittet: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Lorem ipsum brukes som fylltekst i grafisk design og sideombrekking for å demonstrere det grafiske utseende før den endelige teksten er klargjort.
 </p>
 
 <script src="/deps/sweetalert2.js"></script>
 <script src="/deps/gifshot.js"></script>
 
 <script>
+  var images = [
+    
+    
+      "/public/evolution/i0.png",
+    
+      "/public/evolution/i1.png",
+    
+      "/public/evolution/i6.png",
+    
+      "/public/evolution/screencapture-127-0-0-1-4000-1516355110513.png",
+    
+  ];
+
   gifshot.createGIF({
     'gifHeight': 340,
     'gifWidth': 600,
     'frameDuration': 3,
-    'images': [
-      '/public/evolution/i1.png',
-      '/public/evolution/i2.png',
-      '/public/evolution/i3.png',
-      '/public/evolution/i4.png',
-      '/public/evolution/i5.png',
-    ]
+    'images': images,
   },function(obj) {
     if(!obj.error) {
       var image = obj.image,
@@ -96,3 +132,10 @@ project: p0
     z-index: 101;
   }
 </style>
+
+</article>
+
+
+    </main>
+  </body>
+</html>

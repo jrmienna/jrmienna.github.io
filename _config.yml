@@ -3,8 +3,8 @@
 permalink:           pretty
 
 # Setup
-title:               john rikard mienna
-tagline:             '@jrmienna'
+title:               '@jrmienna'
+tagline:             ''
 url:                 http://jrmienna.github.io
 future:              true
 paginate:            1
@@ -33,6 +33,18 @@ youtube:             UCXjEMKB7djLU41ZKKv_NFsQ
 medium:              jrmienna
 strava:              17162664
 instagram:           jrmienna
+
+collections:
+  ideas:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: "public/evolution"
+    values:
+      image: true
 
 # Gems
 gems:
