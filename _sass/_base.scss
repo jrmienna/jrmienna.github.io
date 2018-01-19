@@ -87,9 +87,13 @@ section {
 a {
   color: $color-text;
   text-decoration: none;
+  // text-decoration: underline solid #56b6c2;
   transition: background-color 0.3s cubic-bezier(.4, 0, .2, 1);
+  border-bottom: 2px solid #56b6c2;
   &:hover {
-    text-decoration: underline;
+    // text-decoration: underline solid #888;
+    // background: #56b6c2;
+    // color: white;
   }
   &:focus {
     outline: 0;
